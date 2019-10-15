@@ -1,0 +1,9 @@
+﻿@model IEnumerable<SpellingGame.Models.Image>
+@foreach (Image i in SpellingGame.Models.ImageRepository.Images)
+{
+    <div>
+        <h3>@i.Images</h3>
+    </div>
+}
+
+@Html.Partial("PartialView")

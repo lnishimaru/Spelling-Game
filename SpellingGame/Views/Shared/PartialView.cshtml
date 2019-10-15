@@ -1,0 +1,27 @@
+﻿@model SpellingGame.Models.Form1
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+</head>
+<body>
+    <p>@ViewBag.Image</p>
+    <p>@ViewBag.Occurrence</p>
+    @{TempData["Data2"] = ViewBag.Occurrence;}
+    <div class="panel panel-success">
+        <h2>Spell this word:</h2>
+        <div>
+            <img src="@ViewBag.Image" />
+        </div>
+    </div>
+</body>
+</html>
+@using (Html.BeginForm("CheckAnswer", "Home", FormMethod.Post))
+{
+<form asp-action="CheckAnswer" asp-controller="Home" method="post">
+    <label>Answer</label>
+    @Html.TextBoxFor(m => m.Answer)
+    <input type="submit" value="Check Answer" />
+</form>
+}
