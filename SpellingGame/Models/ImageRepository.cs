@@ -11,7 +11,12 @@ namespace SpellingGame.Models
         {
             new Image { Images = "pig" },
             new Image { Images = "pie" },
-            new Image { Images = "pen" }
+            new Image { Images = "pen" },
+            new Image { Images = "nap" },
+            new Image { Images = "now" },
+            new Image { Images = "new" },
+            new Image { Images = "name" },
+            new Image { Images = "house" }
         };
 
         public static IEnumerable<Image> Images
@@ -21,7 +26,7 @@ namespace SpellingGame.Models
                 return images;
             }
         }
-        private static List<string> answers = new List<String>() { "pig", "pie", "pen" };
+        private static List<string> answers = new List<String>() { "pig", "pie", "pen","nap","now","new","name","house" };
         
         public static IEnumerable<string> Answers
         {
